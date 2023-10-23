@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    text-transform: uppercase;
+    color: rgb(172, 166, 166);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.main-layout {
+    width: 50vw;
+    height: 70vh;
+    border: 10px solid #d4985c;
+    text-align: center;
+    background-image: linear-gradient(
+        to left,
+        white 0%,
+        white 50%,
+        rgb(197, 201, 202) 50%,
+        rgb(214, 203, 203) 100%
+    );
+}
+
+.material-icons {
+    color: #E76F51;
+    margin-right: 2px;
+}
+
+.casino {
+    margin-top: -20px; /* Adjust the value as needed */
+}
+
+.new-game {
+    margin-top: 30px;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 40px;
+}
+
+
+.player2 {
+    position: relative;
+    top: 5px;
+}
+
+.restore {
+    margin-top: 10px;
+}
+
+.hold {
+    margin-top: 20px;
+}
+
+.current-left-box{
+    width: 100px;
+    height: 70px;
+    background-color: red;
+    position: relative;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    row-gap: 20px;
+}
+
+.current-right-box {
+    width: 100px;
+    height: 70px;
+    background-color: red;
+    position: relative;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    row-gap: 20px;
+}
