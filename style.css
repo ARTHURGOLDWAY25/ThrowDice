@@ -42,6 +42,10 @@ body {
 
 .new-game {
     margin-top: 30px;
+    
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .players {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.js">
+    <script src="style.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -16,7 +16,7 @@
             <span class="material-icons" style="vertical-align: middle;">
                 add_circle_outline
             </span>
-            <span style="vertical-align: middle;">new game</span> 
+            <span id="new-game-button" style="vertical-align: middle;">new game</span> 
         </div>
         
        
@@ -57,7 +57,32 @@
             <span style="vertical-align: middle;">hold</span>
         </div>
     </main>
+        <!-- New HTML elements to make the layout dynamic -->
+    <div id="dice-roll-container">
+        <div id="dice-roll">Dice Roll: <span id="dice-result"></span></div>
+    </div>
     
+    <div id="scores-container">
+        <div class="player-scores" id="player1-scores">
+            <div>Player 1</div>
+            <div>ROUND: <span id="round-score-1"></span></div>
+            <div>GLOBAL: <span id="global-score-1"></span></div>
+        </div>
+        
+        <div class="player-scores" id="player2-scores">
+            <div>Player 2</div>
+            <div>ROUND: <span id="round-score-2"></span></div>
+            <div>GLOBAL: <span id="global-score-2"></span></div>
+        </div>
+
+        <div id="message-container">
+            <p id="message">Message appears here:</p>
+        </div>
+    </div>
+
+   
+
+    <script src="style.js"></script>
 </body>
 </html>
 <!-- Test  Js for git commmit-->
