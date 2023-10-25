@@ -7,9 +7,21 @@ let currentPlayer = 1;
 let gameInProgress = true;
 
 
-function rollDice() {
+
+document.addEventListener('DOMContentLoaded', function (){
+      const rollDiceClick = document.getElementById("dice-roll")
+
+      rollDiceClick.addEventListener ("click", function () {
+         rollDiceLogic()
+      })
+})
+
+function rollDiceLogic() {
     // 1. Simulate a dice roll (replace this with your random number logic)
     const diceRoll = Math.floor(Math.random() * 6) + 1;
+
+    // Update the UI to show the dice roll
+    document.getElementById('roll-dice-output').textContent = diceRoll;
  
     // 2. Check if the game is in progress
     if (gameInProgress) {
@@ -17,8 +29,10 @@ function rollDice() {
        if (diceRoll !== 1) {
           if (currentPlayer === 1) {
              Player1RoundScore += diceRoll;
+             document.getElementById('round-score-1').textContent = Player1RoundScore;
           } else {
              Player2RoundScore += diceRoll;
+             document.getElementById('round-score-2').textContent = Player2RoundScore;
           }
        } else {
           // 4. If the dice roll is 1, the current player's ROUND score is reset to 0
@@ -34,12 +48,12 @@ function rollDice() {
        }
  
        // 7. Update the UI to show the dice roll and scores
-       // You can then update their content as the game progresses
-diceResultElement.textContent = diceRoll; // Example: Set the dice result to 5
-roundScore1Element.textContent = Player1RoundScore; // Example: Update Player 1's ROUND score
-globalScore1Element.textContent = Player1GlobalScore; // Example: Update Player 1's GLOBAL score
-roundScore2Element.textContent = Player2RoundScore; // Example: Update Player 2's ROUND score
-globalScore2Element.textContent = Player2GlobalScore; // Example: Update Player 2's GLOBAL score
+       
+diceResultElement.textContent = diceRoll; 
+roundScore1Element.textContent = Player1RoundScore; 
+globalScore1Element.textContent = Player1GlobalScore; 
+roundScore2Element.textContent = Player2RoundScore; 
+globalScore2Element.textContent = Player2GlobalScore; 
     }
  }
   // Get references to the new elements
@@ -50,6 +64,14 @@ const roundScore2Element = document.getElementById('round-score-2');
 const globalScore2Element = document.getElementById('global-score-2');
 
 // Implement hold function 
+document.addEventListener("DOMContentLoaded", function () {
+   const holdButton=document.getElementById("hold")
+
+   holdButton.addEventListener("click", function () {
+      hold () // Call the existing hold function
+   })
+})
+
 function hold() {
    if (gameInProgress) {
        // Check whose turn it is (based on the currentPlayer variable)
@@ -82,7 +104,7 @@ function hold() {
        }
    }
 }
-hold()
+ 
 
 
 // Add a click event listener to the element
@@ -122,6 +144,7 @@ function resetGame() {
 
 }
 })
+
 
 
 

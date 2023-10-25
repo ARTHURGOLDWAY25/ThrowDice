@@ -42,35 +42,36 @@
             </div>
         </div>
         
-        <span class="material-icons casino" style="font-size: 50px;">casino</span>
+        <span id="roll-dice" class="material-icons casino" style="font-size: 50px;">casino</span>
 
         
         <!-- Restore icon -->
         <div class="restore">
             <span class="material-icons" style="vertical-align: middle;">restore</span>
-            <span style="vertical-align: middle;">roll dice</span>
+            <span id="dice-roll" style="vertical-align: middle;">roll dice</span>
         </div>
         
         <!-- Hold icon -->
         <div class="hold">
             <span class="material-icons" style="vertical-align: middle;">arrow_circle_down</span>
-            <span style="vertical-align: middle;">hold</span>
+            <span id="hold" style="vertical-align: middle;">hold</span>
         </div>
-    </main>
-        <!-- New HTML elements to make the layout dynamic -->
-    <div id="dice-roll-container">
-        <div id="dice-roll">Dice Roll: <span id="dice-result"></span></div>
-    </div>
+    </main> 
     
+
+    
+        <!-- New HTML elements to make the layout dynamic -->
+    
+
     <div id="scores-container">
         <div class="player-scores" id="player1-scores">
-            <div>Player 1</div>
+            <div>Player 1 :</div>
             <div>ROUND: <span id="round-score-1"></span></div>
             <div>GLOBAL: <span id="global-score-1"></span></div>
         </div>
         
         <div class="player-scores" id="player2-scores">
-            <div>Player 2</div>
+            <div>Player 2 :</div>
             <div>ROUND: <span id="round-score-2"></span></div>
             <div>GLOBAL: <span id="global-score-2"></span></div>
         </div>
@@ -78,6 +79,10 @@
         <div id="message-container">
             <p id="message">Message appears here:</p>
         </div>
+
+        <span class="roll-dice-container">
+            <p id="roll-dice-output">Roll Dice Output: </p>
+        </span>
     </div>
 
    

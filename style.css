@@ -18,6 +18,7 @@ body {
 }
 
 .main-layout {
+    margin-right: 10px;
     width: 50vw;
     height: 70vh;
     border: 10px solid #d4985c;
@@ -34,6 +35,14 @@ body {
 .material-icons {
     color: #E76F51;
     margin-right: 2px;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+#dice-roll:hover{
+    cursor: pointer;
 }
 
 .casino {
@@ -67,6 +76,10 @@ body {
 
 .hold {
     margin-top: 20px;
+}
+
+#hold{
+    cursor: pointer;
 }
 
 .current-left-box{
