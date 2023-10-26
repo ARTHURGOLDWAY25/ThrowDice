@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function (){
 
       rollDiceClick.addEventListener ("click", function () {
          rollDiceLogic()
+         checkForWinner()
       })
 })
 
@@ -22,6 +23,9 @@ function rollDiceLogic() {
 
     // Update the UI to show the dice roll
     document.getElementById('roll-dice-output').textContent = diceRoll;
+    
+   
+    
  
     // 2. Check if the game is in progress
     if (gameInProgress) {
@@ -30,9 +34,12 @@ function rollDiceLogic() {
           if (currentPlayer === 1) {
              Player1RoundScore += diceRoll;
              document.getElementById('round-score-1').textContent = Player1RoundScore;
+             document.getElementById('current-score-player1').textContent = Player1RoundScore;
+             
           } else {
              Player2RoundScore += diceRoll;
              document.getElementById('round-score-2').textContent = Player2RoundScore;
+             document.getElementById('current-score-player2').textContent = Player2RoundScore;
           }
        } else {
           // 4. If the dice roll is 1, the current player's ROUND score is reset to 0
@@ -105,6 +112,16 @@ function hold() {
    }
 }
  
+function checkForWinner() {
+   if (Player1GlobalScore >=100) {
+      document.getElementById("message").textContent = "Player 1 Wins !"
+      gameInProgress = false
+   } else if (Player2GlobalScore >=100) {
+      document.getElementById("message").textContent = "Player 2 Wins !"
+      gameInProgress = false
+   }
+   
+}
 
 
 // Add a click event listener to the element
